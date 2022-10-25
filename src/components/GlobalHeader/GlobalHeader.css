@@ -1,7 +1,6 @@
 
 .global-nav {
-    padding-left: 6px;
-    padding-right: 6px;
-    z-index: 999;
+    padding-left: 6px !important;
+    padding-right: 6px !important;
     background-color: #ffffff;
 }
