@@ -1,0 +1,354 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home should match the screenshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="container"
+      >
+        <div
+          class="container"
+          style="margin-bottom: 8px;"
+        >
+          <img
+            class="img-fluid"
+            data-testid="banner-image"
+            src="https://d33l0n8cnowg3h.cloudfront.net/philly-banner.jpg"
+          />
+        </div>
+        <div
+          class="about-me-container container"
+        >
+          <div
+            class="justify-content-center row"
+          >
+            <div
+              class="col-lg-8 col-md-10"
+            >
+              <div
+                class="card"
+              >
+                <div
+                  class="no-gutters row"
+                >
+                  <div
+                    class="col-lg-6 col-md-12"
+                  >
+                    <img
+                      class="card-img"
+                      data-testid="card-img"
+                      src="https://d33l0n8cnowg3h.cloudfront.net/brian_hoscheit_square.jpg"
+                    />
+                  </div>
+                  <div
+                    class="col-lg-6 col-md-12"
+                  >
+                    <div
+                      class="card-body"
+                    >
+                      <div
+                        class="card-title h5"
+                        data-testid="card-title"
+                      >
+                        Hello, I'm Brian!
+                      </div>
+                      <p
+                        class="card-text"
+                        data-testid="card-text"
+                      >
+                        My name is Brian Hoscheit and I am a self taught software engineer working in the Philadelphia area. I have over 4 years experience in requirement gathering, architectural design, application development, and product delivery.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="container"
+        >
+          <div
+            class="justify-content-center row"
+          >
+            <div
+              class="col-lg-4"
+            >
+              <h1
+                class="text-center"
+                data-testid="skill-header"
+              >
+                Skills
+              </h1>
+              <div
+                class="text-center"
+              >
+                <span
+                  class="skill-badge badge rounded-pill bg-primary"
+                  data-testid="skill-React"
+                >
+                  React
+                </span>
+                <span
+                  class="skill-badge badge rounded-pill bg-primary"
+                  data-testid="skill-Jest"
+                >
+                  Jest
+                </span>
+                <span
+                  class="skill-badge badge rounded-pill bg-primary"
+                  data-testid="skill-Node.js"
+                >
+                  Node.js
+                </span>
+                <span
+                  class="skill-badge badge rounded-pill bg-primary"
+                  data-testid="skill-C#"
+                >
+                  C#
+                </span>
+                <span
+                  class="skill-badge badge rounded-pill bg-primary"
+                  data-testid="skill-NUnit"
+                >
+                  NUnit
+                </span>
+                <span
+                  class="skill-badge badge rounded-pill bg-primary"
+                  data-testid="skill-Cypress"
+                >
+                  Cypress
+                </span>
+                <span
+                  class="skill-badge badge rounded-pill bg-primary"
+                  data-testid="skill-SQL"
+                >
+                  SQL
+                </span>
+                <span
+                  class="skill-badge badge rounded-pill bg-primary"
+                  data-testid="skill-MongoDb"
+                >
+                  MongoDb
+                </span>
+                <span
+                  class="skill-badge badge rounded-pill bg-primary"
+                  data-testid="skill-AWS"
+                >
+                  AWS
+                </span>
+                <span
+                  class="skill-badge badge rounded-pill bg-primary"
+                  data-testid="skill-Jenkins"
+                >
+                  Jenkins
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="container"
+    >
+      <div
+        class="container"
+        style="margin-bottom: 8px;"
+      >
+        <img
+          class="img-fluid"
+          data-testid="banner-image"
+          src="https://d33l0n8cnowg3h.cloudfront.net/philly-banner.jpg"
+        />
+      </div>
+      <div
+        class="about-me-container container"
+      >
+        <div
+          class="justify-content-center row"
+        >
+          <div
+            class="col-lg-8 col-md-10"
+          >
+            <div
+              class="card"
+            >
+              <div
+                class="no-gutters row"
+              >
+                <div
+                  class="col-lg-6 col-md-12"
+                >
+                  <img
+                    class="card-img"
+                    data-testid="card-img"
+                    src="https://d33l0n8cnowg3h.cloudfront.net/brian_hoscheit_square.jpg"
+                  />
+                </div>
+                <div
+                  class="col-lg-6 col-md-12"
+                >
+                  <div
+                    class="card-body"
+                  >
+                    <div
+                      class="card-title h5"
+                      data-testid="card-title"
+                    >
+                      Hello, I'm Brian!
+                    </div>
+                    <p
+                      class="card-text"
+                      data-testid="card-text"
+                    >
+                      My name is Brian Hoscheit and I am a self taught software engineer working in the Philadelphia area. I have over 4 years experience in requirement gathering, architectural design, application development, and product delivery.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="container"
+      >
+        <div
+          class="justify-content-center row"
+        >
+          <div
+            class="col-lg-4"
+          >
+            <h1
+              class="text-center"
+              data-testid="skill-header"
+            >
+              Skills
+            </h1>
+            <div
+              class="text-center"
+            >
+              <span
+                class="skill-badge badge rounded-pill bg-primary"
+                data-testid="skill-React"
+              >
+                React
+              </span>
+              <span
+                class="skill-badge badge rounded-pill bg-primary"
+                data-testid="skill-Jest"
+              >
+                Jest
+              </span>
+              <span
+                class="skill-badge badge rounded-pill bg-primary"
+                data-testid="skill-Node.js"
+              >
+                Node.js
+              </span>
+              <span
+                class="skill-badge badge rounded-pill bg-primary"
+                data-testid="skill-C#"
+              >
+                C#
+              </span>
+              <span
+                class="skill-badge badge rounded-pill bg-primary"
+                data-testid="skill-NUnit"
+              >
+                NUnit
+              </span>
+              <span
+                class="skill-badge badge rounded-pill bg-primary"
+                data-testid="skill-Cypress"
+              >
+                Cypress
+              </span>
+              <span
+                class="skill-badge badge rounded-pill bg-primary"
+                data-testid="skill-SQL"
+              >
+                SQL
+              </span>
+              <span
+                class="skill-badge badge rounded-pill bg-primary"
+                data-testid="skill-MongoDb"
+              >
+                MongoDb
+              </span>
+              <span
+                class="skill-badge badge rounded-pill bg-primary"
+                data-testid="skill-AWS"
+              >
+                AWS
+              </span>
+              <span
+                class="skill-badge badge rounded-pill bg-primary"
+                data-testid="skill-Jenkins"
+              >
+                Jenkins
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
