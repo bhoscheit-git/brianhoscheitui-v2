@@ -21,6 +21,9 @@ const GlobalHeader = () => {
                     <Nav.Item>
                         <Nav.Link data-testid="link-home" active={isActive("home")} as={Link} to="home" onClick={handleExpand}>Home</Nav.Link>
                     </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link data-testid="link-experience" active={isActive("experience")} as={Link} to="experience" onClick={handleExpand}>Experience</Nav.Link>
+                    </Nav.Item>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

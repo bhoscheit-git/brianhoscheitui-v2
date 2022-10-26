@@ -37,7 +37,7 @@ Object {
                     class="col-lg-6 col-md-12"
                   >
                     <img
-                      class="card-img"
+                      class="card-img card-img-top"
                       data-testid="card-img"
                       src="https://d33l0n8cnowg3h.cloudfront.net/brian_hoscheit_square.jpg"
                     />
@@ -185,7 +185,7 @@ Object {
                   class="col-lg-6 col-md-12"
                 >
                   <img
-                    class="card-img"
+                    class="card-img card-img-top"
                     data-testid="card-img"
                     src="https://d33l0n8cnowg3h.cloudfront.net/brian_hoscheit_square.jpg"
                   />
