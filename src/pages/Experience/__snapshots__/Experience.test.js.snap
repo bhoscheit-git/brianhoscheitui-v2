@@ -1,0 +1,450 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Experience should match the screenshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="container"
+      >
+        <div
+          class="about-me-container container"
+        >
+          <div
+            class="justify-content-center row"
+          >
+            <div
+              class="col-lg-8 col-md-10"
+            >
+              <div
+                class="card"
+              >
+                <div
+                  class="no-gutters row"
+                >
+                  <div
+                    class="my-auto col-lg-4 col-md-12"
+                    data-testid="card-img-col"
+                  >
+                    <img
+                      class="card-img card-img-top"
+                      data-testid="card-img"
+                      src="https://d33l0n8cnowg3h.cloudfront.net/Travelers_share.jpg"
+                    />
+                  </div>
+                  <div
+                    class="col-lg-8 col-md-12"
+                    data-testid="card-txt-col"
+                  >
+                    <div
+                      class="card-body"
+                    >
+                      <div
+                        class="card-title h5"
+                        data-testid="card-title"
+                      >
+                        Software Engineer I
+                      </div>
+                      <p
+                        class="card-text"
+                        data-testid="card-text"
+                      >
+                        Developer on mission critical software Find A Claim 2.0 used by claim professionals to locate client data across hundreds of millions of records.
+
+        Involved in the development, testing, and deployment of key Travelers’s initiative Straight Through Processing (STP) to automate report only claims.
+        
+        Learned and utilized new technologies React, Jest, Node.js, and MongoDb within a month of joining Travelers.
+        
+        Implemented solution to remove stale documents from Find A Claim 2.0 Mongo collections at a rate 100x faster than the architecture proposed solution (execution time of approximately 4 hours daily to 3 minutes).
+        
+        Joined HSP Innersourcing team to assist technology value stream with new HSP features.
+        
+        Frequently presents new claim platform enhancements to business stakeholders.
+        
+        Mentored two junior developers from the Travelers Software Engineering Bootcamp.
+        
+        Identified and participated in growth opportunities through the Presentation and Facilitation Group Mentoring Program and the Security Enthusiasts Group
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="about-me-container container"
+        >
+          <div
+            class="justify-content-center row"
+          >
+            <div
+              class="col-lg-8 col-md-10"
+            >
+              <div
+                class="card"
+              >
+                <div
+                  class="no-gutters row"
+                >
+                  <div
+                    class="my-auto col-lg-4 col-md-12"
+                    data-testid="card-img-col"
+                  >
+                    <img
+                      class="card-img card-img-top"
+                      data-testid="card-img"
+                      src="https://d33l0n8cnowg3h.cloudfront.net/bny_logo.png"
+                    />
+                  </div>
+                  <div
+                    class="col-lg-8 col-md-12"
+                    data-testid="card-txt-col"
+                  >
+                    <div
+                      class="card-body"
+                    >
+                      <div
+                        class="card-title h5"
+                        data-testid="card-title"
+                      >
+                        Lead Analyst - Full Stack Software Developer
+                      </div>
+                      <p
+                        class="card-text"
+                        data-testid="card-text"
+                      >
+                        Consistently ranked within the top 15% of BNY Mellon’s 50,000+ employees by performance.
+
+        Was Responsible for major features and architectural design on a fully self-service enterprise grade solution to manage BNY Mellon’s reconciliations.
+        
+        Reduced operational risk by developing a parent-child relationship for recon configurations, which automated the flow of user updates.
+        
+        Ensured progress tracking in an agile environment through the use of Git integrated Jira scrum boards.
+        
+        Implemented full unit test coverage through the use of Katalon Studio, NUnit, and Moq.
+        
+        Presented application demos to prospective clients, led application trainings, and managed user acceptance testing.
+        
+        Utilized HTML, CSS, Bootstrap, Typescript, JavaScript, Angular 5+, C# RESTful Web Api, and T-SQL.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="about-me-container container"
+        >
+          <div
+            class="justify-content-center row"
+          >
+            <div
+              class="col-lg-8 col-md-10"
+            >
+              <div
+                class="card"
+              >
+                <div
+                  class="no-gutters row"
+                >
+                  <div
+                    class="my-auto col-lg-4 col-md-12"
+                    data-testid="card-img-col"
+                  >
+                    <img
+                      class="card-img card-img-top"
+                      data-testid="card-img"
+                      src="https://d33l0n8cnowg3h.cloudfront.net/bny_logo.png"
+                    />
+                  </div>
+                  <div
+                    class="col-lg-8 col-md-12"
+                    data-testid="card-txt-col"
+                  >
+                    <div
+                      class="card-body"
+                    >
+                      <div
+                        class="card-title h5"
+                        data-testid="card-title"
+                      >
+                        Lead Analyst - Application Developer
+                      </div>
+                      <p
+                        class="card-text"
+                        data-testid="card-text"
+                      >
+                        Responsible for the creation and support of 25+ light applications resulting in 3000+ hours of time saving annually. 
+
+        Worked with client onboarding to gather, review, and finalize project requirements.
+        
+        Developed distributed applications utilizing C#, VB.NET, VBA, MS Access, and SQL Server.
+        
+        Wrote and maintained end user software documentation for all developed applications.
+        
+        Provided backup support troubleshooting applications in production.
+        
+        Managed multiple projects simultaneously, while meeting strict deadlines under minimal supervision.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="container"
+    >
+      <div
+        class="about-me-container container"
+      >
+        <div
+          class="justify-content-center row"
+        >
+          <div
+            class="col-lg-8 col-md-10"
+          >
+            <div
+              class="card"
+            >
+              <div
+                class="no-gutters row"
+              >
+                <div
+                  class="my-auto col-lg-4 col-md-12"
+                  data-testid="card-img-col"
+                >
+                  <img
+                    class="card-img card-img-top"
+                    data-testid="card-img"
+                    src="https://d33l0n8cnowg3h.cloudfront.net/Travelers_share.jpg"
+                  />
+                </div>
+                <div
+                  class="col-lg-8 col-md-12"
+                  data-testid="card-txt-col"
+                >
+                  <div
+                    class="card-body"
+                  >
+                    <div
+                      class="card-title h5"
+                      data-testid="card-title"
+                    >
+                      Software Engineer I
+                    </div>
+                    <p
+                      class="card-text"
+                      data-testid="card-text"
+                    >
+                      Developer on mission critical software Find A Claim 2.0 used by claim professionals to locate client data across hundreds of millions of records.
+
+        Involved in the development, testing, and deployment of key Travelers’s initiative Straight Through Processing (STP) to automate report only claims.
+        
+        Learned and utilized new technologies React, Jest, Node.js, and MongoDb within a month of joining Travelers.
+        
+        Implemented solution to remove stale documents from Find A Claim 2.0 Mongo collections at a rate 100x faster than the architecture proposed solution (execution time of approximately 4 hours daily to 3 minutes).
+        
+        Joined HSP Innersourcing team to assist technology value stream with new HSP features.
+        
+        Frequently presents new claim platform enhancements to business stakeholders.
+        
+        Mentored two junior developers from the Travelers Software Engineering Bootcamp.
+        
+        Identified and participated in growth opportunities through the Presentation and Facilitation Group Mentoring Program and the Security Enthusiasts Group
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="about-me-container container"
+      >
+        <div
+          class="justify-content-center row"
+        >
+          <div
+            class="col-lg-8 col-md-10"
+          >
+            <div
+              class="card"
+            >
+              <div
+                class="no-gutters row"
+              >
+                <div
+                  class="my-auto col-lg-4 col-md-12"
+                  data-testid="card-img-col"
+                >
+                  <img
+                    class="card-img card-img-top"
+                    data-testid="card-img"
+                    src="https://d33l0n8cnowg3h.cloudfront.net/bny_logo.png"
+                  />
+                </div>
+                <div
+                  class="col-lg-8 col-md-12"
+                  data-testid="card-txt-col"
+                >
+                  <div
+                    class="card-body"
+                  >
+                    <div
+                      class="card-title h5"
+                      data-testid="card-title"
+                    >
+                      Lead Analyst - Full Stack Software Developer
+                    </div>
+                    <p
+                      class="card-text"
+                      data-testid="card-text"
+                    >
+                      Consistently ranked within the top 15% of BNY Mellon’s 50,000+ employees by performance.
+
+        Was Responsible for major features and architectural design on a fully self-service enterprise grade solution to manage BNY Mellon’s reconciliations.
+        
+        Reduced operational risk by developing a parent-child relationship for recon configurations, which automated the flow of user updates.
+        
+        Ensured progress tracking in an agile environment through the use of Git integrated Jira scrum boards.
+        
+        Implemented full unit test coverage through the use of Katalon Studio, NUnit, and Moq.
+        
+        Presented application demos to prospective clients, led application trainings, and managed user acceptance testing.
+        
+        Utilized HTML, CSS, Bootstrap, Typescript, JavaScript, Angular 5+, C# RESTful Web Api, and T-SQL.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="about-me-container container"
+      >
+        <div
+          class="justify-content-center row"
+        >
+          <div
+            class="col-lg-8 col-md-10"
+          >
+            <div
+              class="card"
+            >
+              <div
+                class="no-gutters row"
+              >
+                <div
+                  class="my-auto col-lg-4 col-md-12"
+                  data-testid="card-img-col"
+                >
+                  <img
+                    class="card-img card-img-top"
+                    data-testid="card-img"
+                    src="https://d33l0n8cnowg3h.cloudfront.net/bny_logo.png"
+                  />
+                </div>
+                <div
+                  class="col-lg-8 col-md-12"
+                  data-testid="card-txt-col"
+                >
+                  <div
+                    class="card-body"
+                  >
+                    <div
+                      class="card-title h5"
+                      data-testid="card-title"
+                    >
+                      Lead Analyst - Application Developer
+                    </div>
+                    <p
+                      class="card-text"
+                      data-testid="card-text"
+                    >
+                      Responsible for the creation and support of 25+ light applications resulting in 3000+ hours of time saving annually. 
+
+        Worked with client onboarding to gather, review, and finalize project requirements.
+        
+        Developed distributed applications utilizing C#, VB.NET, VBA, MS Access, and SQL Server.
+        
+        Wrote and maintained end user software documentation for all developed applications.
+        
+        Provided backup support troubleshooting applications in production.
+        
+        Managed multiple projects simultaneously, while meeting strict deadlines under minimal supervision.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

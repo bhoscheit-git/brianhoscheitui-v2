@@ -1,9 +1,9 @@
 import { render } from "@testing-library/react"
-import Home from "."
+import Experience from "."
 
-describe("Home", () => {
+describe("Experience", () => {
     it("should match the screenshot", () => {
-        const page = render(<Home />)
+        const page = render(<Experience />)
         expect(page).toMatchSnapshot()
     })
 })

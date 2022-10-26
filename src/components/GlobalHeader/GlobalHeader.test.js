@@ -19,5 +19,6 @@ describe("GlobalHeader", () => {
 
     it("should have expected tabs", () => {
         expect(screen.getByTestId('link-home')).toHaveTextContent("Home")
+        expect(screen.getByTestId('link-experience')).toHaveTextContent("Experience")
     })
 })
