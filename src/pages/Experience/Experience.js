@@ -37,11 +37,26 @@ const experiences = [
         Presented application demos to prospective clients, led application trainings, and managed user acceptance testing.
         
         Utilized HTML, CSS, Bootstrap, Typescript, JavaScript, Angular 5+, C# RESTful Web Api, and T-SQL.`
+    },
+    {
+        cardImg: "https://d33l0n8cnowg3h.cloudfront.net/bny_logo.png",
+        cardTitle: "Lead Analyst - Application Developer",
+        cardText: `Responsible for the creation and support of 25+ light applications resulting in 3000+ hours of time saving annually. 
+
+        Worked with client onboarding to gather, review, and finalize project requirements.
+        
+        Developed distributed applications utilizing C#, VB.NET, VBA, MS Access, and SQL Server.
+        
+        Wrote and maintained end user software documentation for all developed applications.
+        
+        Provided backup support troubleshooting applications in production.
+        
+        Managed multiple projects simultaneously, while meeting strict deadlines under minimal supervision.`
     }
 ]
 const Experience = () => (
     <Container>
-        {experiences.map(({ cardImg, cardTitle, cardText }, key) => <AboutMe key={key} cardImg={cardImg} cardTitle={cardTitle} cardText={cardText} />)}
+        {experiences.map(({ cardImg, cardTitle, cardText }, key) => <AboutMe key={key} lg={4} cardImg={cardImg} cardTitle={cardTitle} cardText={cardText} />)}
     </Container>
 )
 

@@ -24,7 +24,8 @@ Object {
                   class="no-gutters row"
                 >
                   <div
-                    class="col-lg-6 col-md-12"
+                    class="my-auto col-lg-4 col-md-12"
+                    data-testid="card-img-col"
                   >
                     <img
                       class="card-img card-img-top"
@@ -33,7 +34,8 @@ Object {
                     />
                   </div>
                   <div
-                    class="col-lg-6 col-md-12"
+                    class="col-lg-8 col-md-12"
+                    data-testid="card-txt-col"
                   >
                     <div
                       class="card-body"
@@ -87,7 +89,8 @@ Object {
                   class="no-gutters row"
                 >
                   <div
-                    class="col-lg-6 col-md-12"
+                    class="my-auto col-lg-4 col-md-12"
+                    data-testid="card-img-col"
                   >
                     <img
                       class="card-img card-img-top"
@@ -96,7 +99,8 @@ Object {
                     />
                   </div>
                   <div
-                    class="col-lg-6 col-md-12"
+                    class="col-lg-8 col-md-12"
+                    data-testid="card-txt-col"
                   >
                     <div
                       class="card-body"
@@ -132,6 +136,67 @@ Object {
             </div>
           </div>
         </div>
+        <div
+          class="about-me-container container"
+        >
+          <div
+            class="justify-content-center row"
+          >
+            <div
+              class="col-lg-8 col-md-10"
+            >
+              <div
+                class="card"
+              >
+                <div
+                  class="no-gutters row"
+                >
+                  <div
+                    class="my-auto col-lg-4 col-md-12"
+                    data-testid="card-img-col"
+                  >
+                    <img
+                      class="card-img card-img-top"
+                      data-testid="card-img"
+                      src="https://d33l0n8cnowg3h.cloudfront.net/bny_logo.png"
+                    />
+                  </div>
+                  <div
+                    class="col-lg-8 col-md-12"
+                    data-testid="card-txt-col"
+                  >
+                    <div
+                      class="card-body"
+                    >
+                      <div
+                        class="card-title h5"
+                        data-testid="card-title"
+                      >
+                        Lead Analyst - Application Developer
+                      </div>
+                      <p
+                        class="card-text"
+                        data-testid="card-text"
+                      >
+                        Responsible for the creation and support of 25+ light applications resulting in 3000+ hours of time saving annually. 
+
+        Worked with client onboarding to gather, review, and finalize project requirements.
+        
+        Developed distributed applications utilizing C#, VB.NET, VBA, MS Access, and SQL Server.
+        
+        Wrote and maintained end user software documentation for all developed applications.
+        
+        Provided backup support troubleshooting applications in production.
+        
+        Managed multiple projects simultaneously, while meeting strict deadlines under minimal supervision.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>,
@@ -155,7 +220,8 @@ Object {
                 class="no-gutters row"
               >
                 <div
-                  class="col-lg-6 col-md-12"
+                  class="my-auto col-lg-4 col-md-12"
+                  data-testid="card-img-col"
                 >
                   <img
                     class="card-img card-img-top"
@@ -164,7 +230,8 @@ Object {
                   />
                 </div>
                 <div
-                  class="col-lg-6 col-md-12"
+                  class="col-lg-8 col-md-12"
+                  data-testid="card-txt-col"
                 >
                   <div
                     class="card-body"
@@ -218,7 +285,8 @@ Object {
                 class="no-gutters row"
               >
                 <div
-                  class="col-lg-6 col-md-12"
+                  class="my-auto col-lg-4 col-md-12"
+                  data-testid="card-img-col"
                 >
                   <img
                     class="card-img card-img-top"
@@ -227,7 +295,8 @@ Object {
                   />
                 </div>
                 <div
-                  class="col-lg-6 col-md-12"
+                  class="col-lg-8 col-md-12"
+                  data-testid="card-txt-col"
                 >
                   <div
                     class="card-body"
@@ -255,6 +324,67 @@ Object {
         Presented application demos to prospective clients, led application trainings, and managed user acceptance testing.
         
         Utilized HTML, CSS, Bootstrap, Typescript, JavaScript, Angular 5+, C# RESTful Web Api, and T-SQL.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="about-me-container container"
+      >
+        <div
+          class="justify-content-center row"
+        >
+          <div
+            class="col-lg-8 col-md-10"
+          >
+            <div
+              class="card"
+            >
+              <div
+                class="no-gutters row"
+              >
+                <div
+                  class="my-auto col-lg-4 col-md-12"
+                  data-testid="card-img-col"
+                >
+                  <img
+                    class="card-img card-img-top"
+                    data-testid="card-img"
+                    src="https://d33l0n8cnowg3h.cloudfront.net/bny_logo.png"
+                  />
+                </div>
+                <div
+                  class="col-lg-8 col-md-12"
+                  data-testid="card-txt-col"
+                >
+                  <div
+                    class="card-body"
+                  >
+                    <div
+                      class="card-title h5"
+                      data-testid="card-title"
+                    >
+                      Lead Analyst - Application Developer
+                    </div>
+                    <p
+                      class="card-text"
+                      data-testid="card-text"
+                    >
+                      Responsible for the creation and support of 25+ light applications resulting in 3000+ hours of time saving annually. 
+
+        Worked with client onboarding to gather, review, and finalize project requirements.
+        
+        Developed distributed applications utilizing C#, VB.NET, VBA, MS Access, and SQL Server.
+        
+        Wrote and maintained end user software documentation for all developed applications.
+        
+        Provided backup support troubleshooting applications in production.
+        
+        Managed multiple projects simultaneously, while meeting strict deadlines under minimal supervision.
                     </p>
                   </div>
                 </div>

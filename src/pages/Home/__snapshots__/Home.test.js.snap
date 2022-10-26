@@ -34,7 +34,8 @@ Object {
                   class="no-gutters row"
                 >
                   <div
-                    class="col-lg-6 col-md-12"
+                    class="my-auto col-lg-6 col-md-12"
+                    data-testid="card-img-col"
                   >
                     <img
                       class="card-img card-img-top"
@@ -44,6 +45,7 @@ Object {
                   </div>
                   <div
                     class="col-lg-6 col-md-12"
+                    data-testid="card-txt-col"
                   >
                     <div
                       class="card-body"
@@ -182,7 +184,8 @@ Object {
                 class="no-gutters row"
               >
                 <div
-                  class="col-lg-6 col-md-12"
+                  class="my-auto col-lg-6 col-md-12"
+                  data-testid="card-img-col"
                 >
                   <img
                     class="card-img card-img-top"
@@ -192,6 +195,7 @@ Object {
                 </div>
                 <div
                   class="col-lg-6 col-md-12"
+                  data-testid="card-txt-col"
                 >
                   <div
                     class="card-body"
