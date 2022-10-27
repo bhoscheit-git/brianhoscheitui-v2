@@ -4,6 +4,8 @@ name: develop-build-and-deploy
 on:
   release:
     types: [published, edited]
+env:
+  REACT_APP_SERVICE_URL: ${{ secrets.REACT_APP_SERVICE_URL }}
 jobs:
   # To build the project
   build-tambola:
