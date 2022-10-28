@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import GlobalFooter from './components/GlobalFooter';
 import Experience from './pages/Experience';
 import { AppProvider } from './context/AppContext';
+import Login from './pages/Login';
 
 const App = () => (
     <AppProvider>
@@ -13,6 +14,7 @@ const App = () => (
             <Routes>
                 <Route path="/home" element={<Home />} />
                 <Route path="/experience" element={<Experience />} />
+                <Route path="/login" element={<Login />} />
                 <Route
                     path="*"
                     element={<Navigate to="/home" />}
