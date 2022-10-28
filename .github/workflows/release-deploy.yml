@@ -1,11 +1,16 @@
 # Name of workflow as seen in Github actions tab
-name: develop-build-and-deploy
+name: release-deploy
 # Run workflow only on push to dev branch
 on:
   release:
     types: [published, edited]
 env:
   REACT_APP_SERVICE_URL: ${{ secrets.REACT_APP_SERVICE_URL }}
+  REACT_APP_COGNITO_REGION: ${{ secrets.REACT_APP_COGNITO_REGION }}
+  REACT_APP_USER_POOLS_ID: ${{ secrets.REACT_APP_USER_POOLS_ID }}
+  REACT_APP_USER_POOLS_WEB_CLIENT_ID: ${{ secrets.REACT_APP_USER_POOLS_WEB_CLIENT_ID }}
+  REACT_APP_COGNITO_IDENTITY_POOL_ID: ${{ secrets.REACT_APP_COGNITO_IDENTITY_POOL_ID }}
+  REACT_APP_MANDATORY_SIGN_IN: ${{ secrets.REACT_APP_MANDATORY_SIGN_IN }}
 jobs:
   # To build the project
   build-tambola:
