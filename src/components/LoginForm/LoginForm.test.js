@@ -2,13 +2,24 @@ import { render, screen, act } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import LoginForm from "./LoginForm"
 import { Auth } from 'aws-amplify'
+import * as AuthContext from '../../context/AuthContext'
+import { BrowserRouter as Router } from "react-router-dom";
+
+const mockedUsedNavigate = jest.fn();
+jest.mock('react-router-dom', () => ({
+   ...jest.requireActual('react-router-dom'),
+  useNavigate: () => mockedUsedNavigate,
+}));
 
 describe("LoginForm", () => {
+    let setIsUserAuthenticated
     let signIn
     beforeEach(() => {
+        setIsUserAuthenticated = jest.fn()
         signIn = jest.fn()
+        jest.spyOn(AuthContext, "useAuthContext").mockImplementation(() => ({ setIsUserAuthenticated }))
         jest.spyOn(Auth, "signIn").mockImplementation(signIn)
-        render(<LoginForm />)
+        render(<Router><LoginForm /></Router>)
     })
     it("should have header", () => {
         expect(screen.getByTestId('login-header')).toHaveTextContent('Login')
@@ -27,7 +38,7 @@ describe("LoginForm", () => {
         expect(screen.getByTestId('login-button')).toBeDisabled()
     })
     it("should not have alert if no message provided", () => {
-        expect(screen.queryByTestId("login-message")).not.toBeInTheDocument() 
+        expect(screen.queryByTestId("login-message")).not.toBeInTheDocument()
     })
     it("should call Auth with username and password on login button click", async () => {
         act(() => userEvent.type(screen.getByTestId('login-username'), "username"))

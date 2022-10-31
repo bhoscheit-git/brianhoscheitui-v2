@@ -10,7 +10,7 @@ const Skills = () => {
             <Row className="justify-content-center">
                 <Col lg={4}>
                     <h1 data-testid="skill-header" className="text-center">Skills</h1>
-                    <div className="text-center">
+                    <div data-testid="skills-badge-container" className="text-center">
                         {skills?.map((skill, key) => <Badge key={key} data-testid={`skill-${skill}`} bg="primary" pill className="skill-badge">{skill}</Badge>)}
                     </div>
                 </Col>

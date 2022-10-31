@@ -51,10 +51,18 @@ Object {
                       class="card-body"
                     >
                       <div
-                        class="card-title h5"
-                        data-testid="card-title"
+                        class="row"
                       >
-                        title
+                        <div
+                          class="col"
+                        >
+                          <div
+                            class="card-title h5"
+                            data-testid="card-title"
+                          >
+                            title
+                          </div>
+                        </div>
                       </div>
                       <p
                         class="card-text"
@@ -86,6 +94,7 @@ Object {
               </h1>
               <div
                 class="text-center"
+                data-testid="skills-badge-container"
               />
             </div>
           </div>
@@ -140,10 +149,18 @@ Object {
                     class="card-body"
                   >
                     <div
-                      class="card-title h5"
-                      data-testid="card-title"
+                      class="row"
                     >
-                      title
+                      <div
+                        class="col"
+                      >
+                        <div
+                          class="card-title h5"
+                          data-testid="card-title"
+                        >
+                          title
+                        </div>
+                      </div>
                     </div>
                     <p
                       class="card-text"
@@ -175,6 +192,7 @@ Object {
             </h1>
             <div
               class="text-center"
+              data-testid="skills-badge-container"
             />
           </div>
         </div>
