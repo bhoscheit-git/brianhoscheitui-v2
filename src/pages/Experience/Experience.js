@@ -6,8 +6,8 @@ const Experience = () => {
     const { person } = useAppContext()
     const { experience } = person ?? {}
     return (
-        <Container>
-            {experience.map(({ image, title, text }, key) => <AboutMe key={key} lg={4} cardImg={image} cardTitle={title} cardText={text} />)}
+        <Container data-testid="experience-container">
+            {experience?.map(({ image, title, text }, key) => <AboutMe key={key} lg={4} cardImg={image} cardTitle={title} cardText={text} />)}
         </Container>
     )
 }

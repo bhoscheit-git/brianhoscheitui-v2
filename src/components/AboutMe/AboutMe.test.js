@@ -1,13 +1,19 @@
-import { render, screen } from "@testing-library/react"
+import { render, screen, act } from "@testing-library/react"
+import * as AuthContext from '../../context/AuthContext'
 import AboutMe from "./AboutMe"
+import userEvent from '@testing-library/user-event'
 
 describe("About Me", () => {
     const lg = 1
     const src = 'src'
     const title = 'title'
     const text = 'text'
+    let onEdit
+    let rerender
     beforeEach(() => {
-        render(<AboutMe lg={lg} cardImg={src} cardTitle={title} cardText={text} />)
+        onEdit = jest.fn()
+        jest.spyOn(AuthContext, 'useAuthContext').mockImplementation(() => ({ isAuthenticated: false }));
+        ({ rerender } = render(<AboutMe lg={lg} cardImg={src} cardTitle={title} cardText={text} />));
     })
     it("should container image", () => {
         expect(screen.getByTestId("card-img")).toHaveAttribute("src", src)
@@ -18,7 +24,26 @@ describe("About Me", () => {
     it("should contain text", () => {
         expect(screen.getByTestId("card-text")).toHaveTextContent(text)
     })
-    it.each([{ testId: 'card-img-col', width: lg }, { testId: 'card-txt-col', width: 12 - lg }])("should set column widths", ({testId, width}) => {
+    it.each([{ testId: 'card-img-col', width: lg }, { testId: 'card-txt-col', width: 12 - lg }])("should set column widths", ({ testId, width }) => {
         expect(screen.getByTestId(testId)).toHaveClass(`col-lg-${width}`)
+    })
+    it("should not display pencil when not authenticated", () => {
+        expect(screen.queryByTestId('about-me-edit')).not.toBeInTheDocument()
+    })
+    it("should not display pencil when authenticated and not editable", () => {
+        jest.spyOn(AuthContext, 'useAuthContext').mockImplementation(() => ({ isAuthenticated: true }));
+        rerender(<AboutMe lg={lg} cardImg={src} cardTitle={title} cardText={text} />);
+        expect(screen.queryByTestId('about-me-edit')).not.toBeInTheDocument()
+    })
+    it("should display pencil when authenticated and editable", () => {
+        jest.spyOn(AuthContext, 'useAuthContext').mockImplementation(() => ({ isAuthenticated: true }));
+        rerender(<AboutMe lg={lg} cardImg={src} cardTitle={title} cardText={text} isEditable={true}/>);
+        expect(screen.getByTestId('about-me-edit')).toBeInTheDocument()
+    })
+    it("should call onEdit when pencil clicked", () => {
+        jest.spyOn(AuthContext, 'useAuthContext').mockImplementation(() => ({ isAuthenticated: true }));
+        rerender(<AboutMe lg={lg} cardImg={src} cardTitle={title} cardText={text} onEdit={onEdit} isEditable={true} />);
+        act(() => userEvent.click(screen.getByTestId('about-me-edit')))
+        expect(onEdit).toHaveBeenCalled()
     })
 })
