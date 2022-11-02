@@ -7,6 +7,78 @@ Object {
     <div>
       <div
         class="container"
+      >
+        <div
+          data-testid="experience-container"
+        >
+          <div
+            class="about-me-container container"
+          >
+            <div
+              class="justify-content-center row"
+            >
+              <div
+                class="col-lg-8 col-md-10"
+              >
+                <div
+                  class="card"
+                >
+                  <div
+                    class="no-gutters row"
+                  >
+                    <div
+                      class="my-auto col-lg-4 col-md-12"
+                      data-testid="card-img-col"
+                    >
+                      <img
+                        class="card-img card-img-top"
+                        data-testid="card-img"
+                        src="image"
+                      />
+                    </div>
+                    <div
+                      class="col-lg-8 col-md-12"
+                      data-testid="card-txt-col"
+                    >
+                      <div
+                        class="card-body"
+                      >
+                        <div
+                          class="row"
+                        >
+                          <div
+                            class="col"
+                          >
+                            <div
+                              class="card-title h5"
+                              data-testid="card-title"
+                            >
+                              title
+                            </div>
+                          </div>
+                        </div>
+                        <p
+                          class="card-text"
+                          data-testid="card-text"
+                        >
+                          text
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="container"
+    >
+      <div
         data-testid="experience-container"
       >
         <div
@@ -62,72 +134,6 @@ Object {
                         text
                       </p>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="container"
-      data-testid="experience-container"
-    >
-      <div
-        class="about-me-container container"
-      >
-        <div
-          class="justify-content-center row"
-        >
-          <div
-            class="col-lg-8 col-md-10"
-          >
-            <div
-              class="card"
-            >
-              <div
-                class="no-gutters row"
-              >
-                <div
-                  class="my-auto col-lg-4 col-md-12"
-                  data-testid="card-img-col"
-                >
-                  <img
-                    class="card-img card-img-top"
-                    data-testid="card-img"
-                    src="image"
-                  />
-                </div>
-                <div
-                  class="col-lg-8 col-md-12"
-                  data-testid="card-txt-col"
-                >
-                  <div
-                    class="card-body"
-                  >
-                    <div
-                      class="row"
-                    >
-                      <div
-                        class="col"
-                      >
-                        <div
-                          class="card-title h5"
-                          data-testid="card-title"
-                        >
-                          title
-                        </div>
-                      </div>
-                    </div>
-                    <p
-                      class="card-text"
-                      data-testid="card-text"
-                    >
-                      text
-                    </p>
                   </div>
                 </div>
               </div>

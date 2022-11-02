@@ -1,4 +1,4 @@
-import { makeGetApiCall, makePutApiCall } from "./apiHelper"
+import { makeGetApiCall, makePutApiCall, makeDeleteApiCall } from "./apiHelper"
 import * as Auth from './auth'
 
 describe("apiHelper", () => {
@@ -40,6 +40,27 @@ describe("apiHelper", () => {
             }
 
             await makePutApiCall(route, body)
+            expect(fetch).toHaveBeenCalledWith(`${process.env.REACT_APP_SERVICE_URL}/${route}`, expected)
+        })
+    })
+    describe("makeDeleteApiCall", () => {
+        it("should return expected value", async () => {
+            const actual = await makeDeleteApiCall()
+            expect(actual).toEqual(response)
+        })
+        it("should call fetch with expected params", async () => {
+            const route = 'route'
+            const body = { test: 'test' }
+            const expected = {
+                body: JSON.stringify(body),
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                    "Content-Type": "application/json"
+                },
+                method: "DELETE"
+            }
+
+            await makeDeleteApiCall(route, body)
             expect(fetch).toHaveBeenCalledWith(`${process.env.REACT_APP_SERVICE_URL}/${route}`, expected)
         })
     })
