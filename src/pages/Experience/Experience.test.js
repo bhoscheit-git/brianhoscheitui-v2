@@ -37,8 +37,10 @@ describe("Experience", () => {
         expect(handleEdit).toHaveBeenCalledWith({})
     })
     it("should call handleEdit with empty object on pencil click", () => {
-        jest.spyOn(AuthContext, "useAuthContext").mockReturnValue({ isAuthenticated: true })
+        jest.spyOn(AuthContext, 'useAuthContext').mockImplementation(() => ({ isAuthenticated: true }));
         render(<Experience />)
+        const img = screen.getByTestId("card-img")
+        act(() => img.dispatchEvent(new Event("load")))
         act(() => userEvent.click(screen.getByTestId("about-me-edit")))
         expect(handleEdit).toHaveBeenCalledWith(experience[0])
     })

@@ -10,10 +10,11 @@ const Home = () => {
     const { about, show, isLoading, currentAbout, handleEdit, handleSave, handleUpdate, handleClose, error } = useHomeContext()
     return (
         <>
-            <UpdateAboutMeModal show={show} isLoading={isLoading} about={currentAbout} onClose={handleClose} onUpdate={handleUpdate} onSave={handleSave} error={error}/>
+            <UpdateAboutMeModal show={show} isLoading={isLoading} about={currentAbout} onClose={handleClose} onUpdate={handleUpdate} onSave={handleSave} error={error} />
             <Container>
                 <ImageBanner style={{ marginBottom: '8px' }} src="https://d33l0n8cnowg3h.cloudfront.net/philly-banner.jpg" />
                 <AboutMe
+                    isLoading={isLoading}
                     cardImg={about?.image}
                     cardTitle={about?.title}
                     cardText={about?.text}
