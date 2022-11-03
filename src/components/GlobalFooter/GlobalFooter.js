@@ -4,17 +4,14 @@ import { Image } from 'react-bootstrap'
 import './GlobalFooter.css'
 
 const GlobalFooter = () => (
-    <>
-        <hr className='footer-divider'/>
-        <footer className="text-center">
-            <a data-testid="linkedin-link" href="https://www.linkedin.com/in/brian-hoscheit-3822a59a" target="_blank" rel="noreferrer">
-                <Image src={LinkedIn} className="footer-icon" />
-            </a>
-            <a data-testid="github-link" href="https://github.com/bhoscheit-git" target="_blank" rel="noreferrer">
-                <Image src={GitHub} className="footer-icon"/>
-            </a>
-        </footer>
-    </>
+    <footer className="global-footer text-center">
+        <a data-testid="linkedin-link" href="https://www.linkedin.com/in/brian-hoscheit-3822a59a" target="_blank" rel="noreferrer">
+            <Image src={LinkedIn} className="footer-icon" />
+        </a>
+        <a data-testid="github-link" href="https://github.com/bhoscheit-git" target="_blank" rel="noreferrer">
+            <Image src={GitHub} className="footer-icon" />
+        </a>
+    </footer>
 )
 
 export default GlobalFooter

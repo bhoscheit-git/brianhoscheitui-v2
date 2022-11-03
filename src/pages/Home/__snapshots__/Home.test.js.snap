@@ -12,11 +12,20 @@ Object {
           class="container"
           style="margin-bottom: 8px;"
         >
-          <img
-            class="img-fluid"
-            data-testid="banner-image"
-            src="https://d33l0n8cnowg3h.cloudfront.net/philly-banner.jpg"
+          <div
+            class="shimmer-placeholder"
+            data-testid="shimmer-placeholder"
           />
+          <div
+            data-testid="placeholder-child-container"
+            style="visibility: hidden; position: absolute;"
+          >
+            <img
+              class="img-fluid"
+              data-testid="banner-image"
+              src="https://d33l0n8cnowg3h.cloudfront.net/philly-banner.jpg"
+            />
+          </div>
         </div>
         <div
           class="about-me-container container"
@@ -37,11 +46,20 @@ Object {
                     class="my-auto col-lg-6 col-md-12"
                     data-testid="card-img-col"
                   >
-                    <img
-                      class="card-img card-img-top"
-                      data-testid="card-img"
-                      src="image"
+                    <div
+                      class="shimmer-placeholder"
+                      data-testid="shimmer-placeholder"
                     />
+                    <div
+                      data-testid="placeholder-child-container"
+                      style="visibility: hidden; position: absolute;"
+                    >
+                      <img
+                        class="card-img card-img-top"
+                        data-testid="card-img"
+                        src="image"
+                      />
+                    </div>
                   </div>
                   <div
                     class="col-lg-6 col-md-12"
@@ -57,19 +75,64 @@ Object {
                           class="col"
                         >
                           <div
-                            class="card-title h5"
-                            data-testid="card-title"
-                          >
-                            title
-                          </div>
+                            class="shimmer-placeholder"
+                            data-testid="shimmer-0"
+                            style="height: 10px; margin-bottom: 5px;"
+                          />
                         </div>
                       </div>
-                      <p
-                        class="card-text"
-                        data-testid="card-text"
+                      <div
+                        class="row"
                       >
-                        text
-                      </p>
+                        <div
+                          class="col"
+                        >
+                          <div
+                            class="shimmer-placeholder"
+                            data-testid="shimmer-1"
+                            style="height: 10px; margin-bottom: 5px;"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="row"
+                      >
+                        <div
+                          class="col"
+                        >
+                          <div
+                            class="shimmer-placeholder"
+                            data-testid="shimmer-2"
+                            style="height: 10px; margin-bottom: 5px;"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="row"
+                      >
+                        <div
+                          class="col"
+                        >
+                          <div
+                            class="shimmer-placeholder"
+                            data-testid="shimmer-3"
+                            style="height: 10px; margin-bottom: 5px;"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="row"
+                      >
+                        <div
+                          class="col"
+                        >
+                          <div
+                            class="shimmer-placeholder"
+                            data-testid="shimmer-4"
+                            style="height: 10px; margin-bottom: 5px;"
+                          />
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -110,11 +173,20 @@ Object {
         class="container"
         style="margin-bottom: 8px;"
       >
-        <img
-          class="img-fluid"
-          data-testid="banner-image"
-          src="https://d33l0n8cnowg3h.cloudfront.net/philly-banner.jpg"
+        <div
+          class="shimmer-placeholder"
+          data-testid="shimmer-placeholder"
         />
+        <div
+          data-testid="placeholder-child-container"
+          style="visibility: hidden; position: absolute;"
+        >
+          <img
+            class="img-fluid"
+            data-testid="banner-image"
+            src="https://d33l0n8cnowg3h.cloudfront.net/philly-banner.jpg"
+          />
+        </div>
       </div>
       <div
         class="about-me-container container"
@@ -135,11 +207,20 @@ Object {
                   class="my-auto col-lg-6 col-md-12"
                   data-testid="card-img-col"
                 >
-                  <img
-                    class="card-img card-img-top"
-                    data-testid="card-img"
-                    src="image"
+                  <div
+                    class="shimmer-placeholder"
+                    data-testid="shimmer-placeholder"
                   />
+                  <div
+                    data-testid="placeholder-child-container"
+                    style="visibility: hidden; position: absolute;"
+                  >
+                    <img
+                      class="card-img card-img-top"
+                      data-testid="card-img"
+                      src="image"
+                    />
+                  </div>
                 </div>
                 <div
                   class="col-lg-6 col-md-12"
@@ -155,19 +236,64 @@ Object {
                         class="col"
                       >
                         <div
-                          class="card-title h5"
-                          data-testid="card-title"
-                        >
-                          title
-                        </div>
+                          class="shimmer-placeholder"
+                          data-testid="shimmer-0"
+                          style="height: 10px; margin-bottom: 5px;"
+                        />
                       </div>
                     </div>
-                    <p
-                      class="card-text"
-                      data-testid="card-text"
+                    <div
+                      class="row"
                     >
-                      text
-                    </p>
+                      <div
+                        class="col"
+                      >
+                        <div
+                          class="shimmer-placeholder"
+                          data-testid="shimmer-1"
+                          style="height: 10px; margin-bottom: 5px;"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="col"
+                      >
+                        <div
+                          class="shimmer-placeholder"
+                          data-testid="shimmer-2"
+                          style="height: 10px; margin-bottom: 5px;"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="col"
+                      >
+                        <div
+                          class="shimmer-placeholder"
+                          data-testid="shimmer-3"
+                          style="height: 10px; margin-bottom: 5px;"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="col"
+                      >
+                        <div
+                          class="shimmer-placeholder"
+                          data-testid="shimmer-4"
+                          style="height: 10px; margin-bottom: 5px;"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
