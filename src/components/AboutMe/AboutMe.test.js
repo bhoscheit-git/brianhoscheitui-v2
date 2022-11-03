@@ -18,14 +18,24 @@ describe("About Me", () => {
     it("should container image", () => {
         expect(screen.getByTestId("card-img")).toHaveAttribute("src", src)
     })
-    it("should contain title", () => {
+    it("should contain title on image load", () => {
         const img = screen.getByTestId("card-img")
         act(() => img.dispatchEvent(new Event("load")))
         expect(screen.getByTestId("card-title")).toHaveTextContent(title)
     })
-    it("should contain text", () => {
+    it("should contain title on image error", () => {
+        const img = screen.getByTestId("card-img")
+        act(() => img.dispatchEvent(new Event("error")))
+        expect(screen.getByTestId("card-title")).toHaveTextContent(title)
+    })
+    it("should contain text on image load", () => {
         const img = screen.getByTestId("card-img")
         act(() => img.dispatchEvent(new Event("load")))
+        expect(screen.getByTestId("card-text")).toHaveTextContent(text)
+    })
+    it("should contain text on image error", () => {
+        const img = screen.getByTestId("card-img")
+        act(() => img.dispatchEvent(new Event("error")))
         expect(screen.getByTestId("card-text")).toHaveTextContent(text)
     })
     it.each([{ testId: 'card-img-col', width: lg }, { testId: 'card-txt-col', width: 12 - lg }])("should set column widths", ({ testId, width }) => {

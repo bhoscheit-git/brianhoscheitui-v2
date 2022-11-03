@@ -23,18 +23,18 @@ describe("UpdateExperienceModal", () => {
         rerender(<UpdateExperienceModal show={true} isLoading={false} experience={updatedExperience} onUpdate={onUpdate} onSave={onSave} onClose={onClose} />)
         expect(screen.getByTestId('update-experience-modal-title')).toHaveTextContent('Edit Experience')
     })
-    it.each(['update-experience-image', 'update-experience-title', 'update-experience-text'])("should have the expected inputs", (testId) => {
-        expect(screen.getByTestId(testId)).toBeInTheDocument()
+    it.each(['Image', 'Title', 'Text'])("should have the expected inputs", (label) => {
+        expect(screen.getByLabelText(label)).toBeInTheDocument()
     })
     it.each(['update-experience-save', 'update-experience-close'])("should have the expected buttons", (testId) => {
         expect(screen.getByTestId(testId)).toBeInTheDocument()
     })
     it.each([
-        { key: 'image', testId: 'update-experience-image' },
-        { key: 'title', testId: 'update-experience-title' },
-        { key: 'text', testId: 'update-experience-text' }])("should call onUpdate with the expected params on input update", ({ key, testId }) => {
+        { key: 'image', label: 'Image' },
+        { key: 'title', label: 'Title' },
+        { key: 'text', label: 'Text' }])("should call onUpdate with the expected params on input update", ({ key, label }) => {
             const text = 'A'
-            act(() => userEvent.type(screen.getByTestId(testId), text))
+            act(() => userEvent.type(screen.getByLabelText(label), text))
             expect(onUpdate).toHaveBeenCalledWith(key, `${experience[key]}${text}`)
         })
     it("should call onSave on save button click", () => {
@@ -53,11 +53,19 @@ describe("UpdateExperienceModal", () => {
         render(<UpdateExperienceModal show={true} error={error} isLoading={false} experience={experience} onUpdate={onUpdate} onSave={onSave} onClose={onClose} />)
         expect(screen.getByTestId('update-experience-alert')).toHaveTextContent(error)
     })
-    it("should not display spinner if not loading", () => {
+    it("should not display save spinner if not loading", () => {
         expect(screen.queryByTestId('update-experience-loading')).not.toBeInTheDocument()
     })
-    it("should display spinner if loading", () => {
+    it("should display save spinner if loading", () => {
         render(<UpdateExperienceModal show={true} isLoading={true} experience={experience} onUpdate={onUpdate} onSave={onSave} onClose={onClose} />)
         expect(screen.getByTestId('update-experience-loading')).toBeInTheDocument()
+    })
+    it("should not display delete spinner if not loading", () => {
+        expect(screen.queryByTestId('delete-experience-loading')).not.toBeInTheDocument()
+    })
+    it("should display delete spinner if loading", () => {
+        const updatedExperience = {...experience, id: '1'}
+        render(<UpdateExperienceModal show={true} isLoading={true} experience={updatedExperience} onUpdate={onUpdate} onSave={onSave} onClose={onClose} />)
+        expect(screen.getByTestId('delete-experience-loading')).toBeInTheDocument()
     })
 })
