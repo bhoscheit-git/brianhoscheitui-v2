@@ -18,7 +18,7 @@ const AboutMe = ({ lg, isLoading, cardImg, cardTitle, cardText, isEditable, onEd
                         <Row className="no-gutters">
                             <Col data-testid="card-img-col" md={12} lg={lg} className="my-auto">
                                 <ImagePlaceholder isLoading={isLoading || isImageLoading} aspectRatio="3005 / 3006">
-                                    <Card.Img data-testid="card-img" className="card-img-top" src={cardImg} onLoad={() => setIsImageLoading(false)} />
+                                    <Card.Img data-testid="card-img" className="card-img-top" src={cardImg} onLoad={() => setIsImageLoading(false)} onError={() => setIsImageLoading(false)} />
                                 </ImagePlaceholder>
 
                             </Col>

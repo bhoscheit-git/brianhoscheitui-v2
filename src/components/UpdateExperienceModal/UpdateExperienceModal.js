@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import { Modal, Form, Button, Alert, Spinner } from "react-bootstrap"
+import CustomFormGroup from '../CustomFormGroup'
 
 const UpdateExperienceModal = ({ show, isLoading, experience, onUpdate, onSave, onDelete, onClose, error }) => {
     const { id, image, title, text } = experience ?? {}
@@ -11,18 +12,9 @@ const UpdateExperienceModal = ({ show, isLoading, experience, onUpdate, onSave, 
             {error && <Alert data-testid="update-experience-alert" variant="warning">{error}</Alert>}
             <Modal.Body>
                 <Form>
-                    <Form.Group className="mb-3">
-                        <Form.Label>Image</Form.Label>
-                        <Form.Control data-testid="update-experience-image" value={image} onChange={e => onUpdate('image', e.target.value)} />
-                    </Form.Group>
-                    <Form.Group className="mb-3">
-                        <Form.Label>Title</Form.Label>
-                        <Form.Control data-testid="update-experience-title" value={title} onChange={e => onUpdate('title', e.target.value)} />
-                    </Form.Group>
-                    <Form.Group className="mb-3">
-                        <Form.Label>Text</Form.Label>
-                        <Form.Control data-testid="update-experience-text" as="textarea" rows={5} value={text} onChange={e => onUpdate('text', e.target.value)} />
-                    </Form.Group>
+                    <CustomFormGroup controlId="update-experience-image" inputKey="image" label="Image" value={image} onChange={onUpdate} />
+                    <CustomFormGroup controlId="update-experience-title" inputKey="title" label="Title" value={title} onChange={onUpdate} />
+                    <CustomFormGroup controlId="update-experience-text" inputKey="text" label="Text" value={text} onChange={onUpdate} as="textarea" rows={5}/>
                     <Button data-testid="update-experience-save" style={{ marginRight: '.5rem' }} variant="primary" onClick={onSave} disabled={isLoading}>
                         {isLoading && <Spinner data-testid="update-experience-loading" animation="border" size="sm" />} Save
                     </Button>

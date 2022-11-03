@@ -18,18 +18,18 @@ describe("UpdateAboutMeModal", () => {
     it("should have the expected title", () => {
         expect(screen.getByTestId('update-about-me-modal-title')).toHaveTextContent('Edit About Me')
     })
-    it.each(['update-about-me-image', 'update-about-me-title', 'update-about-me-text'])("should have the expected inputs", (testId) => {
-        expect(screen.getByTestId(testId)).toBeInTheDocument()
+    it.each(['Image', 'Title', 'Text'])("should have the expected inputs", (label) => {
+        expect(screen.getByLabelText(label)).toBeInTheDocument()
     })
     it.each(['update-about-me-save', 'update-about-me-close'])("should have the expected buttons", (testId) => {
         expect(screen.getByTestId(testId)).toBeInTheDocument()
     })
     it.each([
-        { key: 'image', testId: 'update-about-me-image' },
-        { key: 'title', testId: 'update-about-me-title' },
-        { key: 'text', testId: 'update-about-me-text' }])("should call onUpdate with the expected params on input update", ({ key, testId }) => {
+        { key: 'image', label: 'Image' },
+        { key: 'title', label: 'Title' },
+        { key: 'text', label: 'Text' }])("should call onUpdate with the expected params on input update", ({ key, label }) => {
             const text = 'A'
-            act(() => userEvent.type(screen.getByTestId(testId), text))
+            act(() => userEvent.type(screen.getByLabelText(label), text))
             expect(onUpdate).toHaveBeenCalledWith(key, `${about[key]}${text}`)
         })
     it("should call onSave on save button click", () => {
