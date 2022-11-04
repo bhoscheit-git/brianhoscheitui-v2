@@ -1,34 +1,11 @@
-import { useState } from "react"
-import { Container, Form, Col, Row, Button, Alert, Spinner } from "react-bootstrap"
-import { Auth } from 'aws-amplify'
-import { useNavigate } from "react-router-dom"
-import { useAuthContext } from "../../context/AuthContext"
+import { Container, Form, Col, Row } from "react-bootstrap"
+import CustomFormGroup from "../CustomFormGroup"
+import ConditionalAlert from "../ConditionalAlert"
+import { useLoginContext } from "../../context/LoginContext"
+import SpinnerButton from "../SpinnerButton"
 
 const LoginForm = () => {
-    const navigate = useNavigate()
-    const { setIsUserAuthenticated } = useAuthContext()
-    const [isLoading, setIsLoading] = useState(false)
-    const [message, setMessage] = useState('')
-    const [username, setUsername] = useState('')
-    const [password, setPassword] = useState('')
-
-    const handleSubmit = async () => {
-        try {
-            setIsLoading(true)
-            setMessage({})
-            await Auth.signIn(username, password)
-            setMessage({ variant: 'success', text: 'Login successful!' })
-            await setIsUserAuthenticated()
-            navigate('/home')
-        } catch (e) {
-            setMessage({ variant: 'warning', text: 'Invalid username or password' })
-        } finally {
-            setIsLoading(false)
-        }
-    }
-
-    const isFormValid = () => !!username && !!password && !isLoading
-
+    const { username, password, isLoading, message, isValid, handleSubmit, handleChange } = useLoginContext()
     return (
         <Container>
             <Row className="justify-content-center">
@@ -36,18 +13,12 @@ const LoginForm = () => {
                     <Form>
                         <h1 data-testid="login-header">Login</h1>
                         <hr />
-                        {message.text && <Alert data-testid="login-message" variant={message.variant}>{message.text}</Alert>}
-                        <Form.Group className="mb-3" controlId="username">
-                            <Form.Label>Username</Form.Label>
-                            <Form.Control data-testid="login-username" value={username} onChange={e => setUsername(e.target.value)} />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="password">
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control data-testid="login-password" type="password" value={password} onChange={e => setPassword(e.target.value)} />
-                        </Form.Group>
-                        <Button data-testid="login-button" variant="primary" onClick={handleSubmit} disabled={!isFormValid()}>
-                            {isLoading && <Spinner animation="border" size="sm" />} Login
-                        </Button>
+                        <ConditionalAlert data-testid="login-message" variant={message?.variant}>{message?.text}</ConditionalAlert>
+                        <CustomFormGroup controlId="login-username" inputKey="username" label="Username" value={username} onChange={handleChange} />
+                        <CustomFormGroup controlId="login-password" inputKey="password" label="Password" type="password" value={password} onChange={handleChange} />
+                        <SpinnerButton data-testid="login-button" variant="primary" onClick={handleSubmit} disabled={!isValid || isLoading} isLoading={isLoading}>
+                            Login
+                        </SpinnerButton>
                     </Form>
                 </Col>
             </Row>

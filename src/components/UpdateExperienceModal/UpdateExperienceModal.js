@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types'
-import { Modal, Form, Button, Alert, Spinner } from "react-bootstrap"
+import { Modal, Form, Button, Spinner } from "react-bootstrap"
+import ConditionalAlert from '../ConditionalAlert'
 import CustomFormGroup from '../CustomFormGroup'
+import SpinnerButton from '../SpinnerButton'
 
 const UpdateExperienceModal = ({ show, isLoading, experience, onUpdate, onSave, onDelete, onClose, error }) => {
     const { id, image, title, text } = experience ?? {}
@@ -9,18 +11,18 @@ const UpdateExperienceModal = ({ show, isLoading, experience, onUpdate, onSave, 
             <Modal.Header>
                 <Modal.Title data-testid="update-experience-modal-title">{id == null ? "Add" : "Edit"} Experience</Modal.Title>
             </Modal.Header>
-            {error && <Alert data-testid="update-experience-alert" variant="warning">{error}</Alert>}
+            <ConditionalAlert data-testid="update-experience-alert" variant="warning">{error}</ConditionalAlert>
             <Modal.Body>
                 <Form>
                     <CustomFormGroup controlId="update-experience-image" inputKey="image" label="Image" value={image} onChange={onUpdate} />
                     <CustomFormGroup controlId="update-experience-title" inputKey="title" label="Title" value={title} onChange={onUpdate} />
-                    <CustomFormGroup controlId="update-experience-text" inputKey="text" label="Text" value={text} onChange={onUpdate} as="textarea" rows={5}/>
-                    <Button data-testid="update-experience-save" style={{ marginRight: '.5rem' }} variant="primary" onClick={onSave} disabled={isLoading}>
+                    <CustomFormGroup controlId="update-experience-text" inputKey="text" label="Text" value={text} onChange={onUpdate} as="textarea" rows={5} />
+                    <SpinnerButton data-testid="update-experience-save" style={{ marginRight: '.5rem' }} variant="primary" onClick={onSave} disabled={isLoading}>
                         {isLoading && <Spinner data-testid="update-experience-loading" animation="border" size="sm" />} Save
-                    </Button>
-                    {id != null && <Button data-testid="update-experience-delete" style={{ marginRight: '.5rem' }} variant="danger" onClick={onDelete} disabled={isLoading}>
-                        {isLoading && <Spinner data-testid="delete-experience-loading" animation="border" size="sm" />} Delete
-                    </Button>
+                    </SpinnerButton>
+                    {id != null && <SpinnerButton data-testid="update-experience-delete" style={{ marginRight: '.5rem' }} variant="danger" onClick={onDelete} disabled={isLoading} isLoading={isLoading}>
+                        Delete
+                    </SpinnerButton>
                     }
                     <Button data-testid="update-experience-close" variant="secondary" onClick={onClose}>
                         Close

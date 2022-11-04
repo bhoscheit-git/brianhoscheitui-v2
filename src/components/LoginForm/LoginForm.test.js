@@ -25,24 +25,24 @@ describe("LoginForm", () => {
         expect(screen.getByTestId('login-header')).toHaveTextContent('Login')
     })
     it("should have username input", () => {
-        expect(screen.getByTestId('login-username')).toBeInTheDocument()
+        expect(screen.getByLabelText("Username")).toBeInTheDocument()
     })
     it("should have password input", () => {
-        expect(screen.getByTestId('login-password')).toBeInTheDocument()
+        expect(screen.getByLabelText("Password")).toBeInTheDocument()
     })
     it("should have login button", () => {
         expect(screen.getByTestId('login-button')).toBeInTheDocument()
     })
-    it.each(['login-username', 'login-password'])("should have a disabled button if username and password are not populated", (testId) => {
-        act(() => userEvent.type(screen.getByTestId(testId), "sample"))
+    it.each(['Username', 'Password'])("should have a disabled button if username and password are not populated", (label) => {
+        act(() => userEvent.type(screen.getByLabelText(label), "sample"))
         expect(screen.getByTestId('login-button')).toBeDisabled()
     })
     it("should not have alert if no message provided", () => {
         expect(screen.queryByTestId("login-message")).not.toBeInTheDocument()
     })
     it("should call Auth with username and password on login button click", async () => {
-        act(() => userEvent.type(screen.getByTestId('login-username'), "username"))
-        act(() => userEvent.type(screen.getByTestId('login-password'), "password"))
+        act(() => userEvent.type(screen.getByLabelText('Username'), "username"))
+        act(() => userEvent.type(screen.getByLabelText('Password'), "password"))
         await act(async () => userEvent.click(screen.getByTestId('login-button')))
         expect(signIn).toHaveBeenCalledWith("username", "password")
     })
@@ -50,8 +50,8 @@ describe("LoginForm", () => {
         jest.spyOn(Auth, "signIn").mockImplementation(() => {
             throw new Error()
         })
-        act(() => userEvent.type(screen.getByTestId('login-username'), "username"))
-        act(() => userEvent.type(screen.getByTestId('login-password'), "password"))
+        act(() => userEvent.type(screen.getByLabelText('Username'), "username"))
+        act(() => userEvent.type(screen.getByLabelText('Password'), "password"))
         await act(async () => userEvent.click(screen.getByTestId('login-button')))
         expect(screen.getByTestId("login-message")).toHaveTextContent("Invalid username or password")
     })

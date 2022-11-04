@@ -31,14 +31,13 @@ Object {
                 >
                   <label
                     class="form-label"
-                    for="username"
+                    for="login-username"
                   >
                     Username
                   </label>
                   <input
                     class="form-control"
-                    data-testid="login-username"
-                    id="username"
+                    id="login-username"
                     value=""
                   />
                 </div>
@@ -47,14 +46,13 @@ Object {
                 >
                   <label
                     class="form-label"
-                    for="password"
+                    for="login-password"
                   >
                     Password
                   </label>
                   <input
                     class="form-control"
-                    data-testid="login-password"
-                    id="password"
+                    id="login-password"
                     type="password"
                     value=""
                   />
@@ -65,7 +63,8 @@ Object {
                   disabled=""
                   type="button"
                 >
-                   Login
+                   
+                  Login
                 </button>
               </form>
             </div>
@@ -101,14 +100,13 @@ Object {
               >
                 <label
                   class="form-label"
-                  for="username"
+                  for="login-username"
                 >
                   Username
                 </label>
                 <input
                   class="form-control"
-                  data-testid="login-username"
-                  id="username"
+                  id="login-username"
                   value=""
                 />
               </div>
@@ -117,14 +115,13 @@ Object {
               >
                 <label
                   class="form-label"
-                  for="password"
+                  for="login-password"
                 >
                   Password
                 </label>
                 <input
                   class="form-control"
-                  data-testid="login-password"
-                  id="password"
+                  id="login-password"
                   type="password"
                   value=""
                 />
@@ -135,7 +132,8 @@ Object {
                 disabled=""
                 type="button"
               >
-                 Login
+                 
+                Login
               </button>
             </form>
           </div>
