@@ -1,4 +1,4 @@
-import { render, screen, act } from "@testing-library/react"
+import { render, screen, act, queryByTestId, getByTestId } from "@testing-library/react"
 import UpdateExperienceModal from "./UpdateExperienceModal"
 import userEvent from "@testing-library/user-event"
 
@@ -50,22 +50,26 @@ describe("UpdateExperienceModal", () => {
     })
     it("should display error if there is an error message", () => {
         const error = 'error'
-        render(<UpdateExperienceModal show={true} error={error} isLoading={false} experience={experience} onUpdate={onUpdate} onSave={onSave} onClose={onClose} />)
+        rerender(<UpdateExperienceModal show={true} error={error} isLoading={false} experience={experience} onUpdate={onUpdate} onSave={onSave} onClose={onClose} />)
         expect(screen.getByTestId('update-experience-alert')).toHaveTextContent(error)
     })
     it("should not display save spinner if not loading", () => {
         expect(screen.queryByTestId('update-experience-loading')).not.toBeInTheDocument()
     })
     it("should display save spinner if loading", () => {
-        render(<UpdateExperienceModal show={true} isLoading={true} experience={experience} onUpdate={onUpdate} onSave={onSave} onClose={onClose} />)
+        rerender(<UpdateExperienceModal show={true} isLoading={true} experience={experience} onUpdate={onUpdate} onSave={onSave} onClose={onClose} />)
         expect(screen.getByTestId('update-experience-loading')).toBeInTheDocument()
     })
     it("should not display delete spinner if not loading", () => {
-        expect(screen.queryByTestId('delete-experience-loading')).not.toBeInTheDocument()
+        const updatedExperience = {...experience, id: '1'}
+        rerender(<UpdateExperienceModal show={true} isLoading={false} experience={updatedExperience} onUpdate={onUpdate} onSave={onSave} onClose={onClose} />)
+        const button = screen.getByTestId("update-experience-delete")
+        expect(queryByTestId(button, "button-spinner")).not.toBeInTheDocument()
     })
     it("should display delete spinner if loading", () => {
         const updatedExperience = {...experience, id: '1'}
-        render(<UpdateExperienceModal show={true} isLoading={true} experience={updatedExperience} onUpdate={onUpdate} onSave={onSave} onClose={onClose} />)
-        expect(screen.getByTestId('delete-experience-loading')).toBeInTheDocument()
+        rerender(<UpdateExperienceModal show={true} isLoading={true} experience={updatedExperience} onUpdate={onUpdate} onSave={onSave} onClose={onClose} />)
+        const button = screen.getByTestId("update-experience-delete")
+        expect(getByTestId(button, "button-spinner")).toBeInTheDocument()
     })
 })

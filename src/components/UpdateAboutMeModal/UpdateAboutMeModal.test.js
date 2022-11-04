@@ -1,4 +1,4 @@
-import { render, screen, act } from "@testing-library/react"
+import { render, screen, act, queryByTestId, getByTestId } from "@testing-library/react"
 import UpdateAboutMeModal from "./UpdateAboutMeModal"
 import userEvent from "@testing-library/user-event"
 
@@ -49,10 +49,12 @@ describe("UpdateAboutMeModal", () => {
         expect(screen.getByTestId('update-about-me-alert')).toHaveTextContent(error)
     })
     it("should not display spinner if not loading", () => {
-        expect(screen.queryByTestId('update-about-me-loading')).not.toBeInTheDocument()
+        const button = screen.getByTestId("update-about-me-save")
+        expect(queryByTestId(button, 'button-spinner')).not.toBeInTheDocument()
     })
     it("should display spinner if loading", () => {
-        render(<UpdateAboutMeModal show={true} isLoading={true} about={about} onUpdate={onUpdate} onSave={onSave} onClose={onClose} />)
-        expect(screen.getByTestId('update-about-me-loading')).toBeInTheDocument()
+        rerender(<UpdateAboutMeModal show={true} isLoading={true} about={about} onUpdate={onUpdate} onSave={onSave} onClose={onClose} />)
+        const button = screen.getByTestId("update-about-me-save")
+        expect(getByTestId(button, 'button-spinner')).toBeInTheDocument()
     })
 })
